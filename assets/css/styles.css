@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#main{
+    height: 100vh;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+/* HEADER */
+
+.header{
+    height: 66px;
+    padding: 0 28px;
+    border-bottom: 1px solid #f0f0f0;
+    box-shadow: 0 4px 12px 0 rgb(0 0 0 / 5%);
+    display: flex;
+    align-items: center;
+    user-select: none;
+    background-color: #ffff;
+
+}
+
+.header-menu{
+    cursor: pointer;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    margin-right: 12px;
+    color: var(--text-color);
+    background-color: rgba(0, 0, 0, .05);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.header__logo{
+    color: var(--text-color);
+}
+
+.header__logo p{
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.header__logo h1{
+    font-size: 2.8rem;
+    letter-spacing: 3px;
+
+}
+
+.header__logo h1 i{
+    color: var(--primary-color);
+    font-size: 2.4rem;
+    line-height: 1.4;
+}
+
+.nav__list{
+    width: 300px;
+    padding: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color:#fff;
+    z-index: 10;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all 0.25s linear;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    -ms-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+}
+
+.nav__list.active{
+    transform: translateX(0);
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+
+.nav__close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.1s linear;
+    -webkit-transition: all 0.1s l;
+    -moz-transition: all 0.1s l;
+    -ms-transition: all 0.1s l;
+    -o-transition: all 0.1s l;
+}
+
+.nav__close:hover{
+    color: var(--primary-color);
+}
+
+.nav__logo-wrap{
+    margin-bottom: 24px;
+}
+
+.nav__logo{
+    display: inline;
+}
+
+.nav__logo p, .nav__logo h1{
+    display: inline-block;
+}
+
+.nav_item a{
+    padding: 14px 0;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: all 0.1s linear;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    -ms-transition: all 0.1s linear;
+    -o-transition: all 0.1s linear;
+}
+
+.nav_item a:hover{
+    color: var(--primary-color);
+
+}
+
+/* CONTAINER */
+.container{
+    padding: 10px 0;
+    display: flex;
+    gap: 24px;
+    height: calc(100% - 65px);
+}
+
+.container__item{
+    height: 100%;
+    padding-bottom: 40px;
+}
+
+.container__item:first-child{
+    padding: 0 24px;
+    width: 750px;
+}
+
+.container__item:last-child{
+    flex: 1;
+}
+
+.container__heading{
+    text-align: center;
+    color: var(--primary-color);
+    margin: 16px 0;
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+#form-post{
+    margin: auto;
+}
+
+.form-wrap{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 16px;
+}
+
+.form-item{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #ced0d4;
+    padding: 10px 10px 8px;
+    margin-bottom: 12px;
+    position: relative;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.form-message{
+    font-size: 1.3rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+
+.name{
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.form-item label i{
+    margin-right: 4px;
+}
+
+.attention{
+    color: var(--primary-color);
+}
+
+.form-item input {
+    width: 100%;
+    border: none;
+    padding: 22px 16px 0;
+    font-size: 1.6rem;
+}
+
+.title-content {
+    color: var(--text-color);
+    font-weight: bold;
+    display: block;
+    text-align: left;
+    margin-bottom: 4px;
+}
+
+.form-item textarea {
+    width: 100%;
+    border: none;
+    resize: none;
+    padding: 0 8px;
+    margin-top: 20px;
+}
+
+.option{
+    margin-bottom: 14px;
+}
+
+.radio-input {
+    display: none;
+}
+.radio-label {
+    width: .8rem;
+    height: .8rem;
+    border-radius: .8rem;
+    background-color: #eee;
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 1rem;
+    box-shadow: 0 0 0 4px #eee;
+    transition: all 0.2s linear;
+    margin-right: 8px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+}
+.radio-input:checked + .radio-label {
+    box-shadow: 0 0 0 4px #fff, 0 0 0 6px var(--primary-color);
+    background-color: var(--primary-color);
+}
+
+.btn-submit{
+    margin: auto;
+    position: relative;
+}
+
+.is-loading{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    border-left: 3px solid transparent;
+    animation: spin linear infinite forwards 1.5s;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-animation: spin linear infinite forwards 1.5s;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+
+.btn-submit.is-active{
+    opacity: .7;
+    pointer-events: none;
+}
+
+.btn-submit.is-active span{
+    display: none;
+}
+
+.btn-submit.is-active .is-loading{
+    display: block;
+}
+
+
+/* List Scammer */
+.scammer-list{
+    padding: 0 24px 24px;
+    height: 100%;
+    overflow-y: auto;
+    position: relative;
+}
+
+.scammer-list::-webkit-scrollbar {
+    width: 4px;
+    cursor: pointer;
+}
+
+.scammer-list::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+    transition: all 0.55s linear;
+}
+
+.loader{
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    transform: translate(-50%,-50%);
+    width: 100px;
+    height: 100px;
+    display: none;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+    border-left: 5px solid transparent;
+    animation: spin linear infinite forwards 1.5s;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-animation: spin linear infinite forwards 1.5s;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+
+.loader.active{
+    display: block;
+}
+
+.scammer-item{
+    width: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin-bottom: 24px;
+    user-select: none;
+}
+
+.scammer-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+}
+
+.scammer-header__number{
+    font-weight: bold;
+    margin-right: 1.6rem;
+    pointer-events: none;
+    margin-left: 12px;
+}
+
+.scammer-header__name{
+    font-weight: bold;
+    line-height: 1.4;
+    margin-right: auto;
+    pointer-events: none;
+    display:-webkit-box;
+    -webkit-line-clamp:1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    margin-right: 16px;
+}
+
+
+.scammer-header__more{
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+    display: flex;
+    gap: 12px;
+}
+
+.scammer-header__icon{
+    font-size: 2.4rem;
+    padding: 6px;
+}
+
+.scammer-info{
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+    overflow: hidden;
+    height: 0;
+    transition: all linear 0.25s;
+    -webkit-transition: all linear 0.25s;
+    -moz-transition: all linear 0.25s;
+    -ms-transition: all linear 0.25s;
+    -o-transition: all linear 0.25s;
+}
+
+.scammer-info.active{
+    height: auto;
+}
+
+.scammer-info__item{
+    display: flex;
+    padding: 24px;
+}
+
+.scammer-info__item-img{
+    flex-direction: column;
+    gap: 12px;
+}
+
+.scammer-info__title{
+    min-width: 270px;
+    text-align: left;
+    font-weight: bold;
+    user-select: none;
+    font-size: 1.4rem;
+
+}
+
+.scammer-info__title i {
+    font-size: 1.8rem;
+    margin-right: 4px;
+}
+
+.scammer-info__name{
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: auto;
+}
+
+.scammer-info__name::-webkit-scrollbar {
+    width: 4px;
+    cursor: pointer;
+}
+  
+.scammer-info__name::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+    transition: all 0.55s linear;
+}
+
+#info-name{
+    height: 1.6rem;
+    display:-webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+
+.scammer-info__img{
+    height: auto;
+    width: 350px;
+    object-fit: cover;
+    display: block;
+    flex-direction: column;
+    align-self: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.scammer-author{
+    border-top: 1px solid #ccc;
+    padding: 12px 24px;
+}
+
+.scammer-author__heading{
+    text-align: left;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 24px;
+    text-decoration: underline;
+}
+.scammer-author__info{
+}
+
+.scammer-author__info-item{
+    display: flex;
+    margin-bottom: 12px;
+}

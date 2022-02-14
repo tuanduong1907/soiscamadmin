@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.3-web/css/all.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="./assets/css/toast-mesage.css">
+    <link rel="stylesheet" href="./assets/css/resest.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+    <div id="main">
+        <!-- HEADER -->
+        <header class="header">
+            <i class="header-menu fas fa-bars"></i>
+            <a href="" class="header__logo">
+                <P>
+                    DATA CENTER
+                </P>
+                <h1>
+                    S<i class="fas fa-search"></i>I SCAM
+                </h1>
+            </a>
+            
+            <ul class="nav__list">
+                <i class="nav__close fas fa-times"></i>
+                <div class="nav__logo-wrap">
+                    <a href="" class="header__logo nav__logo">
+                        <P>
+                            DATA CENTER
+                        </P>
+                        <h1>
+                            S<i class="fas fa-search"></i>I SCAM
+                        </h1>
+                    </a>
+                </div>
+                <li class="nav_item">
+                    <a href="./index.html">
+                        Danh Sách Kiểm Duyệt
+                    </a>
+                </li>
+                <li class="nav_item">
+                    <a href="#">
+                        Danh Sách Scammer
+                    </a>
+                </li>
+            </ul>
+        </header>
+        <div class="container">
+            <div class="container__item">
+                <div id="toast"></div>
+                <form action="" id="form-post" method="post">
+                    <h1 class="container__heading">
+                        THÔNG TIN KẺ LỪA ĐẢO
+                    </h1>
+                    <div class="form-wrap">
+                        <div class="form-item">
+                            <label class="name" for="accountHolder">
+                                <i class="fas fa-user"></i>
+                                Chủ tài khoản
+                                <span class="attention">*</span>
+                            </label>
+                            <input type="text" name="accountHolder" id="accountHolder">
+                            <span class="form-message"></span>
+                        </div>
+                        <div class="form-item">
+                            <label class="name" for="phoneNumber">
+                                <i class="fas fa-phone"></i>
+                                Số điện thoại
+                            </label>
+                            <input type="text" name="phoneNumber" id="phoneNumber">
+                            <span class="form-message"></span>
+                        </div>
+                        <div class="form-item">
+                            <label class="name" for="accountNumber">
+                                <i class="far fa-credit-card"></i>
+                                Số tài khoản
+                                <span class="attention">*</span>
+                            </label>
+                            <input type="text" name="accountNumber" id="accountNumber">
+                            <span class="form-message"></span>
+                        </div>
+                        <div class="form-item">
+                            <label class="name" for="bank">
+                                <i class="fas fa-university"></i>
+                                Ngân hàng
+                                <span class="attention">*</span>
+                            </label>
+                            <input type="text" name="bank" id="bank">
+                            <span class="form-message"></span>
+                        </div>
+                    </div>
+                    <div class="form-item">
+                        <label class="name" for="image">
+                            <i class="fas fa-link"></i>
+                            Link ảnh bằng chứng
+                        </label>
+                        <input type="text" name="image" id="image">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-item">
+                        <label class="name" for="content" class="title-content">
+                            Nội dung tố cáo
+                            <span class="attention">*</span>
+                        </label>
+                        <textarea name="content" id="content" rows="5" control-id="ControlID-6"></textarea>
+                        <span class="form-message"></span>
+                    </div>
+                    <h1 class="container__heading">
+                        NGƯỜI XÁC THỰC
+                    </h1>
+                    <div class="form-wrap">
+                        <div class="form-item">
+                            <label class="name" for="authorName">
+                                <i class="fas fa-user"></i>
+                                Họ và tên
+                                <span class="attention">*</span>
+                            </label>
+                            <input type="text" name="authorName" id="authorName">
+                            <span class="form-message"></span>
+                        </div>
+                        <div class="form-item">
+                            <label class="name" for="authorPhone">
+                                <i class="fas fa-phone"></i>
+                                Liên hệ (zalo - sđt)
+                                <span class="attention">*</span>
+                            </label>
+                            <input type="text" name="authorPhone" id="authorPhone">
+                            <span class="form-message"></span>
+                        </div>
+                    </div>
+                    <div class="form-item border-none">
+                        <div class="option">
+                            <input type="radio" name="option" id="male" class="radio-input" value="Nạn nhân" checked/>
+                            <label for="male" class="radio-label"></label>
+                            <label for="male">Tôi chính là nạn nhân</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" name="option" id="fmale" class="radio-input" value="Đăng hộ"/>
+                            <label for="fmale" class="radio-label"></label>
+                            <label for="fmale">Phốt này trên group tôi chỉ đăng hộ</label>
+                        </div>
+                    </div>
+                    <button class="btn btn-submit">
+                        <div class="is-loading"></div>
+                        <span class="btn-text"> Đăng </span>
+                    </button>
+                </form>
+            </div>
+
+
+            <!-- List Scammer -->
+            <div class="container__item container__item-list">
+                <h1 class="container__heading">
+                    DANH SÁCH CHỜ KIỂM DUYỆT
+                </h1>
+                <div class="scammer-list">
+                    <div class="loader"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/validation.js"></script>
+    <script src="./assets/js/toast.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/index.js"></script>
+
+</body>
+</html>
